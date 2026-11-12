@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAHA GLOBAL MARKET AI ULTRA</title>
+<style>
+:root{--bg:#041326;--panel:#0b2c46;--panel2:#103653;--text:#edf5ff;--muted:#a9bfd5;--blue:#2196f3;--green:#00d39a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+main{max-width:900px;margin:auto;padding:24px 16px 40px}h1{font-size:clamp(26px,5vw,42px);line-height:1.2;margin:10px 0 14px}h2{font-size:23px;margin:0 0 16px}.sub{color:var(--muted);font-size:18px;margin-bottom:25px}
+.card{background:var(--panel);border:1px solid #214b69;border-radius:24px;padding:22px;margin:18px 0}
+.start{width:100%;border:0;border-radius:16px;padding:18px;font-size:22px;font-weight:700;background:linear-gradient(100deg,var(--blue),var(--green));color:#031629}
+.note{color:var(--muted);line-height:1.55}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tile{background:var(--panel2);border-radius:16px;padding:16px}.tile b{display:block;font-size:25px;margin:5px 0}
+input{width:100%;min-width:0;background:#031326;color:white;border:1px solid #45627a;border-radius:14px;padding:16px;font-size:17px}
+button{cursor:pointer}.askrow{display:flex;gap:8px;margin-top:12px}.askrow button{border:0;border-radius:14px;background:#51a9ff;color:#031326;padding:0 18px;font-size:17px;font-weight:700}
+#answer{white-space:pre-wrap;background:#03182d;border-radius:16px;padding:17px;line-height:1.6;margin-top:16px;min-height:64px}
+.links{display:flex;flex-wrap:wrap;gap:18px}.links a{color:#9bcaff;font-weight:600}
+.small{font-size:14px}.pill{display:inline-block;padding:5px 10px;border-radius:20px;background:#173e5b;color:#bfe6ff;font-size:13px}
+@media(max-width:560px){main{padding:18px 12px}.card{padding:18px}.grid{grid-template-columns:1fr}.askrow{flex-direction:column}.askrow button{padding:14px}}
+</style>
+</head>
+<body>
+<main>
+<h1>🌍 MAHA GLOBAL MARKET AI ULTRA</h1>
+<div class="sub">मराठी + English • Global Market Learning</div>
+
+<section class="card">
+  <h2>एक बटण — Learning Assistant सुरू करा</h2>
+  <button class="start" id="start">▶ START AI</button>
+  <p class="note" id="status">शैक्षणिक सहाय्यक सुरू करण्यासाठी बटण दाबा.</p>
+</section>
+
+<section class="card">
+<h2>📊 Market Watch</h2>
+<div class="grid">
+<div class="tile">India • NIFTY 50<b>—</b><span class="note small">Live feed जोडलेला नाही</span></div>
+<div class="tile">India • SENSEX<b>—</b><span class="note small">Live feed जोडलेला नाही</span></div>
+<div class="tile">USA • S&amp;P 500<b>—</b><span class="note small">Live feed जोडलेला नाही</span></div>
+<div class="tile">Japan • Nikkei 225<b>—</b><span class="note small">Live feed जोडलेला नाही</span></div>
+</div>
+<p class="note">बनावट Live आकडे दाखवलेले नाहीत. बाजारभावासाठी अधिकृत स्रोत उघडा.</p>
+</section>
+
+<section class="card">
+<h2>🤖 Market Learning Assistant</h2>
+<p class="note">RSI, MACD, EMA, Candlestick, ETF, Mutual Fund, IPO, SIP, Risk Management याबद्दल शैक्षणिक प्रश्न विचारा.</p>
+<div class="askrow">
+<input id="question" placeholder="उदा. RSI म्हणजे काय?" autocomplete="off">
+<button id="ask">विचारा</button>
+</div>
+<div id="answer" aria-live="polite">नमस्कार! START AI दाबून प्रश्न विचारा. ही सध्या ऑफलाइन शैक्षणिक Demo आहे.</div>
+<p class="note small">टीप: ही ठरावीक शैक्षणिक माहितीवर चालणारी Demo आहे; अजून खरा AI Backend किंवा Real-time market API जोडलेला नाही.</p>
+</section>
+
+<section class="card">
+<h2>🔗 Market Resources</h2>
+<div class="links">
+<a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a>
+<a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a>
+<a href="https://www.nasdaq.com/market-activity" target="_blank" rel="noopener">NASDAQ</a>
+<a href="https://www.nyse.com/markets" target="_blank" rel="noopener">NYSE</a>
+<a href="https://www.investing.com/markets/" target="_blank" rel="noopener">Global Markets</a>
+</div>
+</section>
+<p class="note small">हे शैक्षणिक साधन आहे; वैयक्तिक गुंतवणूक किंवा खरेदी-विक्रीचा सल्ला नाही. बाजारात जोखीम असते. कोणताही आर्थिक निर्णय घेण्यापूर्वी पालक/विश्वासू प्रौढ व्यक्ती व पात्र सल्लागाराची मदत घ्या.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const knowledge=[
+{keys:["rsi","relative strength"],answer:"RSI (Relative Strength Index) हा momentum indicator आहे. तो साधारण 0 ते 100 दरम्यान असतो. 70 पेक्षा वरची पातळी काही विश्लेषक overbought आणि 30 पेक्षा खालची पातळी oversold म्हणून पाहतात. हे हमखास खरेदी-विक्रीचे संकेत नाहीत; trend आणि इतर माहितीही महत्त्वाची असते."},
+{keys:["macd"],answer:"MACD (Moving Average Convergence Divergence) हा trend आणि momentum समजण्यासाठी वापरला जाणारा indicator आहे. यात MACD line, signal line आणि histogram असतात. तो मागील किमतींवर आधारित असल्यामुळे उशिरा संकेत देऊ शकतो; एकट्या MACD वर निर्णय घेऊ नये."},
+{keys:["ema","exponential moving average"],answer:"EMA म्हणजे Exponential Moving Average. यात अलीकडील किमतींना जास्त वजन दिले जाते. त्यामुळे साध्या moving average पेक्षा किंमतीतील बदलांना तुलनेने लवकर प्रतिसाद मिळतो. EMA हा अभ्यासाचा indicator आहे, खात्रीशीर भविष्यवाणी नाही."},
+{keys:["candlestick","candle"],answer:"Candlestick chart मध्ये प्रत्येक candle ठरावीक कालावधीतील Open, High, Low आणि Close दाखवते. Candle चा body open-close दाखवतो आणि wick त्या काळातील high-low दाखवते. एकाच candle वरून बाजाराची पुढची दिशा निश्चित होत नाही."},
+{keys:["etf","mutual fund","म्युच्युअल"],answer:"Mutual Fund मध्ये अनेक गुंतवणूकदारांचे पैसे एकत्र करून फंडाच्या उद्दिष्टानुसार गुंतवले जातात. ETF हा शेअरप्रमाणे एक्स्चेंजवर व्यवहार होणारा फंड असतो. दोन्हींचे खर्च, जोखीम, रचना आणि व्यवहार पद्धती वेगवेगळ्या असू शकतात."},
+{keys:["ipo"],answer:"IPO (Initial Public Offering) म्हणजे कंपनीने पहिल्यांदा सर्वसामान्य गुंतवणूकदारांसाठी शेअर्स उपलब्ध करून देणे. IPO मध्ये कंपनीची माहिती, जोखीम, किंमतपट्टा आणि उद्देश समजून घेणे महत्त्वाचे असते. Listing नंतर किंमत वाढेलच याची हमी नसते."},
+{keys:["sip"],answer:"SIP (Systematic Investment Plan) ही Mutual Fund मध्ये ठरावीक अंतराने ठरावीक रक्कम गुंतवण्याची पद्धत आहे. ती शिस्त लावू शकते; पण नफा निश्चित करत नाही आणि बाजारातील जोखीम कमी किंवा नाहीशी करत नाही."},
+{keys:["risk","जोखीम","stop loss"],answer:"Risk Management म्हणजे संभाव्य तोटा आणि अनिश्चितता समजून घेणे. Stop-loss हा काही ट्रेडिंग प्लॅटफॉर्मवरील ऑर्डर प्रकार आहे; वेगवान बाजारात अपेक्षित किमतीपेक्षा वेगळी execution होऊ शकते. आधी संकल्पना आणि paper-trading मधून शिकणे योग्य."},
+{keys:["hello","नमस्कार","hi"],answer:"नमस्कार! मी सध्या ऑफलाइन Market Learning Demo आहे. RSI, MACD, EMA, Candlestick, ETF, Mutual Fund, IPO किंवा SIP याबद्दल प्रश्न विचारा."}
+];
+function ask(){
+ const q=$("question").value.trim().toLowerCase();
+ if(!q){$("answer").textContent="कृपया आधी प्रश्न लिहा.";return;}
+ const hit=knowledge.find(x=>x.keys.some(k=>q.includes(k)));
+ $("answer").textContent=hit?hit.answer:"या प्रश्नाचे उत्तर या ऑफलाइन Demo मध्ये उपलब्ध नाही. खरा AI जोडण्यासाठी सुरक्षित Backend आणि AI सेवा जोडावी लागेल. सध्या RSI, MACD, EMA, Candlestick, ETF, Mutual Fund, IPO, SIP आणि Risk Management याबद्दल विचारा.";
+}
+$("start").addEventListener("click",()=>{$("status").textContent="Demo सुरू आहे. खाली शैक्षणिक प्रश्न विचारा.";});
+$("ask").addEventListener("click",ask);
+$("question").addEventListener("keydown",e=>{if(e.key==="Enter")ask();});
+</script>
+</body>
+</html>
